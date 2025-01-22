@@ -23,6 +23,7 @@
   * [SL on Cloud](guides/inferencing/cloud_hosting.md)
 * [Prompting](guides/prompting/README.md)
 * [Fine-tuning](guides/finetuning/README.md)
+* [Example Use Cases](guides/use_cases/README.md)
 
 ## Resources
 * [Publications](resources/publications.md)
