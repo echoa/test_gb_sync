@@ -2,9 +2,9 @@
 
 ## Overview
 * [About SL](README.md)
-    * [Licensing](license.md)
-    * [Collaborations](community.md)
-    * [FAQ](faq.md)
+  * [Licensing](license.md)
+  * [Collaborations](community.md)
+  * [FAQ](faq.md)
 
 ## SL Models
 * [SL v1](models/sealion.v1.md)
@@ -17,12 +17,12 @@
 * [SEA-HELM](benchmarks/seahelm.md)
 
 ## Guides
-* [Inferencing] (guides/inferencing/README.md)
-    * [SL API] (guides/inferencing/api_inferencing.md)
-    * [SL on Local] (guides/inferencing/local_hosting.md)
-    * [SL on Cloud] (guides/inferencing/cloud_hosting.md)
-* [Prompting] (guides/prompting/README.md)
-* [Fine-tuning] (guides/finetuning/README.md)
+* [Inferencing](guides/inferencing/README.md)
+  * [SL API](guides/inferencing/api_inferencing.md)
+  * [SL on Local](guides/inferencing/local_hosting.md)
+  * [SL on Cloud](guides/inferencing/cloud_hosting.md)
+* [Prompting](guides/prompting/README.md)
+* [Fine-tuning](guides/finetuning/README.md)
 
 ## Resources
-* [Publications] (resources/publications.md)
+* [Publications](resources/publications.md)
