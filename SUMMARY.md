@@ -2,7 +2,7 @@
 
 ## Overview
 
-* [SEA-LION (South East Asian Languages in One Network)](README.md)
+* [SEA-LION](README.md)
   * [Motivations](overview/why_sealion.md)
   * [Collaborations](overview/collaboration.md)
   * [Contributing](overview/contributing.md)

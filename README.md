@@ -1,4 +1,4 @@
-# SEA-LION (South East Asian Languages in One Network)
+**South East Asian Languages in One Network**
 
 _Built for Southeast Asia, by Southeast Asia_
 
@@ -10,11 +10,61 @@ This guide provides information and resources on SEA-LION including how to acces
 
 ## Key Features of SEA-LION
 
-<table><thead><tr><th width="171">Model Collection</th><th width="73">Size</th><th width="151">Context Length</th><th width="234">Training Strategy</th><th>Available in</th></tr></thead><tbody><tr><td>SEA-LION v3</td><td>9B</td><td>8192</td><td>CPT1 of Gemma2</td><td>Base, Instruct, GGUF</td></tr><tr><td></td><td>8B</td><td>128K</td><td>CPT of Llama 3.1 8B</td><td>Base, Instruct, GGUF</td></tr><tr><td></td><td>70B</td><td>128K</td><td>CPT of Llama 3.1 70B</td><td>Base, Instruct, GGUF</td></tr><tr><td>SEA-LION v2</td><td>8B</td><td>8192</td><td>CPT of Llama3</td><td>Base, Instruct, GGUF</td></tr><tr><td>SEA-LION v1</td><td>3B</td><td>2048</td><td>Pre-training from scratch</td><td>Base</td></tr><tr><td></td><td>7B</td><td>2048</td><td>Pre-training from scratch</td><td>Instruct</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Model Collection</th>
+      <th>Size</th>
+      <th>Context Length</th>
+      <th>Training Strategy</th>
+      <th>Available in</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">SEA-LION v3</td>
+      <td>9B</td>
+      <td>8192</td>
+      <td>CPT<sup>1</sup> of Gemma2</td>
+      <td>Base, Instruct, GGUF</td>
+    </tr>
+    <tr>
+      <td>8B</td>
+      <td>128K</td>
+      <td>CPT of Llama 3.1 8B</td>
+      <td>Base, Instruct, GGUF</td>
+    </tr>
+    <tr>
+      <td>70B</td>
+      <td>128K</td>
+      <td>CPT of Llama 3.1 70B</td>
+      <td>Base, Instruct, GGUF</td>
+    </tr>
+    <tr>
+      <td>SEA-LION v2</td>
+      <td>8B</td>
+      <td>8192</td>
+      <td>CPT of Llama3</td>
+      <td>Base, Instruct, GGUF</td>
+    </tr>
+    <tr>
+      <td rowspan="2">SEA-LION v1</td>
+      <td>3B</td>
+      <td>2048</td>
+      <td>Pre-training from scratch</td>
+      <td>Base</td>
+    </tr>
+    <tr>
+      <td>7B</td>
+      <td>2048</td>
+      <td>Pre-training from scratch</td>
+      <td>Instruct</td>
+    </tr>
+  </tbody>
+</table>
 
-**1 Continued Pre-Training**
-
-\
+<h6><sup>1</sup> Continued Pre-Training<h6>
+<br>
 
 
 ## Performance and Benchmarks
