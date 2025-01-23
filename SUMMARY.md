@@ -2,6 +2,7 @@
 
 ## Overview
 * [About SL](README.md)
+  * [Motivations](overview/why_sealion.md)
   * [Collaborations](overview/collaboration.md)
   * [Contributing](overview/contributing.md)
   * [Code of Conduct](overview/code_of_conduct.md)
