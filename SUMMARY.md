@@ -2,9 +2,9 @@
 
 ## Overview
 * [About SL](README.md)
-  * [Licensing](overview/license.md)
-  * [Contributing](overview/contributing.md)
   * [Collaborations](overview/collaboration.md)
+  * [Contributing](overview/contributing.md)
+  * [Code of Conduct](overview/code_of_conduct.md)
   * [FAQ](overview/faq.md)
 
 ## SL Models
