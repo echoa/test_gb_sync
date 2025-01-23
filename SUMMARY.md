@@ -1,7 +1,8 @@
-# Summary
+# Table of contents
 
 ## Overview
-* [About SL](README.md)
+
+* [SEA-LION (South East Asian Languages in One Network)](README.md)
   * [Motivations](overview/why_sealion.md)
   * [Collaborations](overview/collaboration.md)
   * [Contributing](overview/contributing.md)
@@ -9,6 +10,7 @@
   * [FAQ](overview/faq.md)
 
 ## SL Models
+
 * [SL v1](models/sealion.v1.md)
 * [SL v2](models/sealion.v2.md)
 * [SL v3](models/sealion.v3.md)
@@ -16,9 +18,11 @@
 * [Getting the models](models/download_models.md)
 
 ## Benchmarks
+
 * [SEA-HELM](benchmarks/seahelm.md)
 
 ## Guides
+
 * [Inferencing](guides/inferencing/README.md)
   * [SL API](guides/inferencing/api_inferencing.md)
   * [SL on Local](guides/inferencing/local_hosting.md)
@@ -28,4 +32,5 @@
 * [Example Use Cases](guides/use_cases/README.md)
 
 ## Resources
+
 * [Publications](resources/publications.md)
