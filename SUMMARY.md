@@ -2,9 +2,10 @@
 
 ## Overview
 * [About SL](README.md)
-  * [Licensing](license.md)
-  * [Collaborations](community.md)
-  * [FAQ](faq.md)
+  * [Licensing](overview/license.md)
+  * [Contributing](overview/contributing.md)
+  * [Collaborations](overview/collaboration.md)
+  * [FAQ](overview/faq.md)
 
 ## SL Models
 * [SL v1](models/sealion.v1.md)
