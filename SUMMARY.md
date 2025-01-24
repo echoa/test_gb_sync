@@ -19,12 +19,13 @@
 
 ## Benchmarks
 
+* [BHASA](benchmarks/bhasa.md)
 * [SEA-HELM](benchmarks/seahelm.md)
 
 ## Guides
 
 * [Inferencing](guides/inferencing/README.md)
-  * [SL API](guides/inferencing/api_inferencing.md)
+  * [SL API](guides/inferencing/api.md)
   * [SL on Local](guides/inferencing/local_hosting.md)
   * [SL on Cloud](guides/inferencing/cloud_hosting.md)
 * [Prompting](guides/prompting/README.md)

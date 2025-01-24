@@ -10,61 +10,16 @@ This guide provides information and resources on SEA-LION including how to acces
 
 ## Key Features of SEA-LION
 
-<table>
-  <thead>
-    <tr>
-      <th>Model Collection</th>
-      <th>Size</th>
-      <th>Context Length</th>
-      <th>Training Strategy</th>
-      <th>Available in</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="3">SEA-LION v3</td>
-      <td>9B</td>
-      <td>8192</td>
-      <td>CPT<sup>1</sup> of Gemma2</td>
-      <td>Base, Instruct, GGUF</td>
-    </tr>
-    <tr>
-      <td>8B</td>
-      <td>128K</td>
-      <td>CPT of Llama 3.1 8B</td>
-      <td>Base, Instruct, GGUF</td>
-    </tr>
-    <tr>
-      <td>70B</td>
-      <td>128K</td>
-      <td>CPT of Llama 3.1 70B</td>
-      <td>Base, Instruct, GGUF</td>
-    </tr>
-    <tr>
-      <td>SEA-LION v2</td>
-      <td>8B</td>
-      <td>8192</td>
-      <td>CPT of Llama3</td>
-      <td>Base, Instruct, GGUF</td>
-    </tr>
-    <tr>
-      <td rowspan="2">SEA-LION v1</td>
-      <td>3B</td>
-      <td>2048</td>
-      <td>Pre-training from scratch</td>
-      <td>Base</td>
-    </tr>
-    <tr>
-      <td>7B</td>
-      <td>2048</td>
-      <td>Pre-training from scratch</td>
-      <td>Instruct</td>
-    </tr>
-  </tbody>
-</table>
+| Model Collection | Size | Context Length | Training Strategy          | Available in            |
+|------------------|------|----------------|----------------------------|-------------------------|
+| **SEA-LION v3**  | 9B   | 8192           | CPT¹ of Gemma2            | Base, Instruct, GGUF    |
+|                  | 8B   | 128K           | CPT of Llama 3.1 8B       | Base, Instruct, GGUF    |
+|                  | 70B  | 128K           | CPT of Llama 3.1 70B      | Base, Instruct, GGUF    |
+| **SEA-LION v2**  | 8B   | 8192           | CPT of Llama3             | Base, Instruct, GGUF    |
+| **SEA-LION v1**  | 3B   | 2048           | Pre-training from scratch  | Base                    |
+|                  | 7B   | 2048           | Pre-training from scratch  | Instruct                |
 
-<h6><sup>1</sup> Continued Pre-Training<h6>
-<br>
+¹ Continued Pre-Training
 
 
 ## Performance and Benchmarks

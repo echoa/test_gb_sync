@@ -1,5 +1,7 @@
 # SL version 
 
+Technical page for SLv1 models
+
 ## 3B
 ### Training Methodology
 ### Training Data
@@ -11,3 +13,6 @@
 ### Training Data
 ### Evaluation Methodology
 ### Performance
+
+## Learnings
+- add section on our learnings on building SLv1?
