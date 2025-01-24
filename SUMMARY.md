@@ -4,8 +4,7 @@
 
 * [SEA-LION](README.md)
   * [Motivations](overview/why_sealion.md)
-  * [Collaborations](overview/collaboration.md)
-  * [Contributing](overview/contributing.md)
+  * [Contributing](overview/contributions.md)
   * [Code of Conduct](overview/code_of_conduct.md)
   * [FAQ](overview/faq.md)
 
