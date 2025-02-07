@@ -10,9 +10,9 @@
 
 ## SL Models
 
-* [SL v1](models/sealion.v1.md)
-* [SL v2](models/sealion.v2.md)
-* [SL v3](models/sealion.v3.md)
+* [SL v3](models/sealion_v3.md)
+* [SL v2](models/sealion_v2.md)
+* [SL v1](models/sealion_v1/sealion_v1.md)
 * [Foundation family models](models/others.md)
 * [Getting the models](models/download_models.md)
 
