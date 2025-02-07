@@ -8,7 +8,6 @@ Our SEA-LION-7B model was then further instruct-tuned to produce SEA-LION-7B-Ins
 
 **License:** MIT
 
-<br>
 
 ## SEA-LION-3B / SEA-LION-7B
 ### Model Architecture
@@ -21,7 +20,6 @@ SEA-LION-3B and SEA-LION-7B are both decoder models built on the robust MPT arch
 | Vocabulary     | 256000     | 256000     |
 | Sequence Length | 2048       | 2048       |
 
-<br>
 
 ### Training Infrastructure
 SEA-LION was trained using [MosaicML Composer](https://github.com/mosaicml/composer) on the following hardware:
@@ -44,14 +42,11 @@ SEA-LION was trained using [MosaicML Composer](https://github.com/mosaicml/compo
 
 For full details on our SEA-LION V1 training infrastructure and configuration, please refer to our [SEA-LION Pre-Training Setup Guide](./pre-training/README-PRE-TRAINING.md)
 
-<br>
 
 ### Tokenizer
 For tokenization, both SEA-LION-3B and SEA-LION-7B employed our custom SEABPETokenizer, which is specially tailored for SEA languages, ensuring optimal model performance.
 
 SEABPETokenizer was trained by sampling 20M lines from the model training data, using the SentencePiece framework. The tokenizer type is Byte-Pair Encoding (BPE).
-
-<br>
 
 ### Training Data
 SEA-LION-3B and SEA-LION-7B were trained on 980B tokens of text data from 11 languages spoken across SEA:
@@ -92,7 +87,6 @@ These 980B tokens comprised of the following data mix:
 
 The dataset is available here: [SEA-LION-PILE](https://huggingface.co/datasets/aisingapore/sea-lion-pile).
 
-<br>
 
 ### Performance
 SEA-LION-3B and SEA-LION-7B base models had an average performance on general tasks in English (as measured by Hugging Face's LLM Leaderboard):
@@ -104,7 +98,6 @@ SEA-LION-3B and SEA-LION-7B base models had an average performance on general ta
 
 For up-to-date comparison of SEA-LION performance against other latest models, please refer to our [SEA-LION Leaderboard](https://leaderboard.sea-lion.ai)
 
-<br>
 
 ## SEA-LION-7B-Instruct
 
@@ -112,7 +105,6 @@ SEA-LION-7B-Instruct is a multilingual model which has been fine-tuned with thou
 
 These instructions have been carefully curated and rewritten to ensure the model was trained on truly open, commercially permissive and high quality datasets.
 
-<br>
 
 ### Fine-Tuning Methodology
 
@@ -120,14 +112,12 @@ The SEA-LION-7B-Instruct was fine-tuned using 8x A100-40GB using parameter effic
 
 To perform similar fine-tuning on our SEA-LION-7B base model using the HuggingFace TRL library, you can refer to sample configurations provided in our [SEA-LION QLoRA Fine-Tuning Guide.](./fine-tuning/README.md)
 
-<br>
 
 ### Fine-Tuning Data
 SEA-LION-7B-Instruct was trained on a wide range of instructions that were manually and stringently verified by our team. A large portion of the effort was dedicated to ensuring that each instruction-completion pair that the model sees is of a high quality and any errors were corrected and rewritten by native speakers or else dropped from our mix.
 
 In addition, special care was taken to ensure that the datasets used had commercially permissive licenses through verification with the original data source.
 
-<br>
 
 ### Benchmarks
 We evaluated SEA-LION-7B-Instruct on the BHASA benchmark ([arXiv](https://arxiv.org/abs/2309.06085v2) and [GitHub](https://github.com/aisingapore/bhasa)) across a variety of tasks.
@@ -140,7 +130,6 @@ The evaluation was done zero-shot with Indonesian prompts and only a sample of 1
 - For Natural Language Generation (NLG) tasks, we tested the model on Machine Translation from English to Indonesian (Eng>Indo) and from Indonesian to English (Indo>Eng) using the FLORES-200 dataset, and Abstractive Summarization (Summary) using the XLSum dataset. The metrics used for Machine Translation and Abstractive Summarization are ChrF++ and ROUGE-L respectively.
 - For Natural Language Reasoning (NLR) tasks, we tested the model on Natural Language Inference (NLI) using the IndoNLI lay dataset and on Causal Reasoning (Causal) using the XCOPA dataset. The metrics are based on accuracy for both tasks.
 
-<br>
 
 ### Performance
 SEA-LION V1 models achieved better or competitive performances on tasks in regional languages at the time of release:
@@ -158,7 +147,6 @@ SEA-LION V1 models achieved better or competitive performances on tasks in regio
 
 For up-to-date comparison of SEA-LION performance against other latest models, please refer to our [SEA-LION Leaderboard](https://leaderboard.sea-lion.ai)
 
-<br>
 
 ## SEA-LION-7B-Instruct-GGUF
 
@@ -189,7 +177,6 @@ python convert-hf-to-gguf.py {{model path}}
 
 For other parameters and how to use them, please refer to [llama.cpp documentation.](https://github.com/ggerganov/llama.cpp/blob/master/examples/main/README.md)
 
-<br>
 
 ## How to Download 
 SEA-LION v1 models are available for download via the following channels:
@@ -204,7 +191,6 @@ SEA-LION v1 models are available for download via the following channels:
 | SEA-LION-7B-Instruct | [HuggingFace](https://huggingface.co/aisingapore/sea-lion-7b-instruct)      |
 | SEA-LION-7B-Instruct-GGUF | [HuggingFace](https://huggingface.co/aisingapore/sea-lion-7b-instruct-gguf)      |
 
-<br>
 
 ## Usage
 SEA-LION V1 base and instruct models can be run using the 🤗 Transformers library
@@ -227,12 +213,8 @@ output = model.generate(tokens["input_ids"], max_new_tokens=20, eos_token_id=tok
 print(tokenizer.decode(output[0], skip_special_tokens=True))
 ```
 
-<br>
-
 ## Prompting Guide
 A basic prompting guide for the SEALION V1 models is provided [here](./sealion_v1_promptguide.md)
-
-<br>
 
 ## Disclaimer
 
@@ -241,7 +223,6 @@ It is important for users to be aware that our models exhibits certain limitatio
 2. The model has not been aligned for safety. Developers and users should perform their own safety fine-tuning and related security measures. In no event shall the authors be held liable for any claims, damages, or other liabilities arising from the use of the released weights and codes.
 3. It should be noted that the model has not been optimized for multi-turn dialogue interactions, which may result in reduced effectiveness in extended conversations.
 
-<br>
 
 ## References
 Thai Pre-Training Data Reference

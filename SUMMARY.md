@@ -8,11 +8,11 @@
   * [Code of Conduct](overview/code_of_conduct.md)
   * [FAQ](overview/faq.md)
 
-## SL Models
+## Models
 
-* [SL v3](models/sealion_v3.md)
-* [SL v2](models/sealion_v2.md)
-* [SL v1](models/sealion_v1/sealion_v1.md)
+* [SEA-LION V3](models/sealion_v3.md)
+* [SEA-LION V2](models/sealion_v2.md)
+* [SEA-LION V1](models/sealion_v1/sealion_v1.md)
 * [Foundation family models](models/others.md)
 * [Getting the models](models/download_models.md)
 
