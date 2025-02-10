@@ -1,19 +1,22 @@
 # SEA-LION V1
 
-SEA-LION V1, released in December 2023, was our first collection of Large Language Models (LLMs) that were specifically **pretrained** and **instruct-tuned** for the Southeast Asia (SEA) region, making a significant leap forward in the field of Natural Language Processing in understanding the SEA regional context.
+SEA-LION version 1, released in December 2023, was our first collection of Large Language Models (LLMs) that were specifically **pretrained** and **instruct-tuned** for the Southeast Asia (SEA) region, making a significant leap forward in the field of Natural Language Processing in understanding the SEA regional context.
 
 SEA-LION V1 comes in two model sizes – one with 3 billion parameters (SEA-LION-3B) and another with 7 billion parameters (SEA-LION-7B). Both variants are built on the robust MPT architecture and utilise a vocabulary size of 256K, with **context length of 2048 tokens**.
 
 Our SEA-LION-7B model was then further instruct-tuned to produce SEA-LION-7B-Instruct.
 
-**License:** MIT
-
+At a glance:
+- **Model type:** Decoder
+- **Tokenizer**: Custom SEABPETokenizer
+- **Languages:** English, Chinese, Indonesian, Malay, Thai, Vietnamese, Filipino, Tamil, Burmese, Khmer, Lao
+- **License:** MIT
 
 ## SEA-LION-3B / SEA-LION-7B
 ### Model Architecture
 SEA-LION-3B and SEA-LION-7B are both decoder models built on the robust MPT architecture:
 | Parameter         | SEA-LION-3B | SEA-LION-7B |
-|------------------|------------|------------|
+|------------------|:------------:|:------------:|
 | Layers          | 32         | 32         |
 | d_model        | 2560       | 4096       |
 | head_dim       | 20         | 32         |
@@ -22,9 +25,9 @@ SEA-LION-3B and SEA-LION-7B are both decoder models built on the robust MPT arch
 
 
 ### Training Infrastructure
-SEA-LION was trained using [MosaicML Composer](https://github.com/mosaicml/composer) on the following hardware:
+SEA-LION V1 was trained using [MosaicML Composer](https://github.com/mosaicml/composer) on the following hardware:
 | Training Details             | SEA-LION-3B  | SEA-LION-7B  |
-|------------------------------|-------------|-------------|
+|------------------------------|:-------------:|:-------------:|
 | AWS EC2 p4d.24xlarge        | 30 instances | 32 instances |
 | Nvidia A100 40GB GPU        | 240         | 256         |
 | Training Duration           | 14 days     | 22 days     |
@@ -32,7 +35,7 @@ SEA-LION was trained using [MosaicML Composer](https://github.com/mosaicml/compo
 
 **Configuration:**
 | HyperParameter     | SEA-LION-3B          | SEA-LION-7B          |
-|--------------------|---------------------|---------------------|
+|--------------------|:---------------------:|:---------------------:|
 | Precision         | bfloat16            | bfloat16            |
 | Optimizer        | decoupled_adamw      | decoupled_adamw      |
 | Scheduler        | cosine_with_warmup   | cosine_with_warmup   |
@@ -92,7 +95,7 @@ The dataset is available here: [SEA-LION-PILE](https://huggingface.co/datasets/a
 SEA-LION-3B and SEA-LION-7B base models had an average performance on general tasks in English (as measured by Hugging Face's LLM Leaderboard):
 
 | Model        | ARC   | HellaSwag | MMLU  | TruthfulQA | Average |
-|--------------|-------|-----------|-------|------------|---------|
+|--------------|:-------:|:-----------:|:-------:|:------------:|:---------:|
 | SEA-LION-3B  | 36.26 | 64.59     | 24.07 | 36.46      | 40.35   |
 | SEA-LION-7B  | 39.93 | 68.51     | 26.87 | 35.09      | 42.60   |
 
@@ -178,8 +181,20 @@ python convert-hf-to-gguf.py {{model path}}
 For other parameters and how to use them, please refer to [llama.cpp documentation.](https://github.com/ggerganov/llama.cpp/blob/master/examples/main/README.md)
 
 
+The following quantized GGUF formats of our SEA-LION-7B-Instruct model are available:
+- sea-lion-7b-instruct-Q2_K
+- sea-lion-7b-instruct-Q3_K_M
+- sea-lion-7b-instruct-Q4_0
+- sea-lion-7b-instruct-Q4_K_M
+- sea-lion-7b-instruct-Q5_0
+- sea-lion-7b-instruct-Q5_K_M
+- sea-lion-7b-instruct-Q6_K
+- sea-lion-7b-instruct-Q8_0
+
+Please refer to our [How To Download](#how-to-download) section for more details on how to access them.
+
 ## How to Download 
-SEA-LION v1 models are available for download via the following channels:
+SEA-LION V1 models are available for download via the following channels:
 
 [HuggingFace SEA-LION V1 Collection](https://huggingface.co/collections/aisingapore/sea-lionv1-672589cd29a1781afa6be35e)
 
@@ -193,7 +208,7 @@ SEA-LION v1 models are available for download via the following channels:
 
 
 ## Usage
-SEA-LION V1 base and instruct models can be run using the 🤗 Transformers library
+SEA-LION-7B-Instruct can be run using the 🤗 Transformers library
 
 ```python
 # Please use transformers==4.37.2
