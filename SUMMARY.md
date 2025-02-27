@@ -21,7 +21,6 @@
 
 ## Benchmarks
 
-* [BHASA](benchmarks/bhasa.md)
 * [SEA-HELM](benchmarks/seahelm.md)
 
 ## Guides
