@@ -1,5 +1,5 @@
 # SEA-LION V2
-
+## Introduction
 SEA-LION version 2, released in July 2024, has been continued-pretrained on top of the [Meta-Llama-3-8B-Instruct model](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) that is 8 billion parameters in size, with **context length of 8192 tokens**.
 
 Using continued-pretraining let us leverage the powerful capabilities of the Llama3 base model and build a stronger model with far fewer resources than pre-training from scratch. Compared to the 980B tokens used in for SEA-LION V1, approximately **48B** tokens across 5 SEA languages (English, Indonesia, Tamil, Thai and Vietnamese) was used for the continued pre-training of SEA-LION V2. 
@@ -7,11 +7,22 @@ Using continued-pretraining let us leverage the powerful capabilities of the Lla
 At a glance:
 - **Model type:** Decoder
 - **Tokenizer**: Default tokenizer used in Llama 3 8B Instruct
-- **Languages supported:** English, Indonesian, Thai, Vietnamese, Tamil
+- **Training Data Size**: 48B tokens of SEA data
+- **Context Length**: 8192 
+- **Available Formats**:
+  - Base (llama3-8b-cpt-sea-lionv2-base)
+  - Instruct (llama3-8b-cpt-sea-lionv2.1-instruct)
+  - GGUF (llama3-8b-cpt-sea-lionv2.1-instruct-gguf)
+- **Supported Languages:** 
+   1. English 
+   2. Indonesian 
+   3. Thai
+   4. Vietnamese
+   5. Tamil
 - **License:**  [Llama3 Community License](https://huggingface.co/meta-llama/Meta-Llama-3-8B/blob/main/LICENSE)
 
 
-## LLAMA3-8B-CPT-SEA-LIONv2-BASE
+## LLAMA3 8B CPT SEA-LIONv2 Base
 ### Training Infrastructure
 LLAMA3-8B-CPT-SEA-LIONv2-BASE was trained using [MosaicML Composer](https://github.com/mosaicml/composer) on the following hardware:
 
@@ -74,7 +85,7 @@ For more details on Llama3 8B CPT SEA-LIONv2 base benchmark performance, please 
 
 <br>
 
-## LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct
+## LLAMA3 8B CPT SEA-LIONv2.1 Instruct
 
 LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct is a multilingual model which has been fine-tuned with around 100,000 English instruction-completion pairs alongside a smaller pool of around 50,000 instruction-completion pairs from other ASEAN languages, such as Indonesian, Thai and Vietnamese.
 
@@ -117,7 +128,7 @@ MT-Bench evaluates a model's ability to engage in multi-turn (2 turns) conversat
 
 <br>
 
-## LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct-GGUF
+## LLAMA3 8B CPT SEA-LIONv2.1 Instruct GGUF
 The following quantized GGUF formats of our LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct model are available:
 - llama3-8b-cpt-sea-lionv2.1-instruct-Q2_K
 - llama3-8b-cpt-sea-lionv2.1-instruct-Q3_K_M
@@ -132,7 +143,7 @@ Please refer to our [How To Download](#how-to-download) section for more details
 
 <br>
 
-## How to Download 
+## Download the Model
 SEA-LION V2 models are available for download via the following channels:
 
 [HuggingFace SEA-LION V2 Collection](https://huggingface.co/collections/aisingapore/sea-lionv2-672589c4c7ea47e4174d3e7f)

@@ -1,5 +1,5 @@
 # SEA-LION V1
-
+## Introduction
 SEA-LION version 1, released in December 2023, was our first collection of Large Language Models (LLMs) that were specifically **pretrained** and **instruct-tuned** for the Southeast Asia (SEA) region, making a significant leap forward in the field of Natural Language Processing in understanding the SEA regional context.
 
 SEA-LION V1 comes in two model sizes – one with 3 billion parameters (SEA-LION-3B) and another with 7 billion parameters (SEA-LION-7B). Both variants are built on the robust MPT architecture and utilise a vocabulary size of 256K, with **context length of 2048 tokens**.
@@ -9,6 +9,11 @@ Our SEA-LION-7B model was then further instruct-tuned to produce SEA-LION-7B-Ins
 At a glance:
 - **Model type:** Decoder
 - **Tokenizer**: Custom SEABPETokenizer
+- **Available Formats**:
+  - 3B Base (sea-lion-3b)
+  - 7B Base (sea-lion-7b)
+  - 7B Instruct (sea-lion-7b-instruct)
+  - 7B GGUF (sea-lion-7b-instruct-gguf)
 - **Languages:** English, Chinese, Indonesian, Malay, Thai, Vietnamese, Filipino, Tamil, Burmese, Khmer, Lao
 - **License:** MIT
 
@@ -193,7 +198,7 @@ The following quantized GGUF formats of our SEA-LION-7B-Instruct model are avail
 
 Please refer to our [How To Download](#how-to-download) section for more details on how to access them.
 
-## How to Download 
+## Download the Model
 SEA-LION V1 models are available for download via the following channels:
 
 [HuggingFace SEA-LION V1 Collection](https://huggingface.co/collections/aisingapore/sea-lionv1-672589cd29a1781afa6be35e)
