@@ -19,7 +19,7 @@ There's an increasing need for benchmarks that assess not only linguistic capabi
 SEA-HELM deliberately incorporates community participation by involving native speakers to ensure linguistic accuracy and cultural authenticity. For example, the evaluation suite includes a cultural evaluation dataset for Filipino developed in collaboration with community members from the Philippines.
  
 
-## Key Components of SEA-HELM
+## Core Pillars of SEA-HELM
 
 SEA-HELM is organized into five core evaluation pillars, designed to comprehensively assess various competencies of LLMs.
 
