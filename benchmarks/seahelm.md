@@ -85,9 +85,9 @@ To provide transparency, comparative insights and understanding of models' multi
 The [leaderboard](https://leaderboard.sea-lion.ai) offers multiple views, including overall scores, language-specific scores, and detailed task scores, allowing users to delve deeper into the evaluation results.
 
 
-## Key Datasets and Resources
+## SEA-HELM Datasets and Resources
 
-SEA-HELM evaluation datasets are publicly available on [HuggingFace](https://huggingface.co/collections/aisingapore/sea-helm-evaluation-datasets-67593d0bb8c9f17f9f6b0fcb).
+Our SEA-HELM evaluation datasets are publicly available on [HuggingFace](https://huggingface.co/collections/aisingapore/sea-helm-evaluation-datasets-67593d0bb8c9f17f9f6b0fcb). 
 
 
 ## Limitations and Future Work
@@ -99,7 +99,7 @@ While SEA-HELM aims for holistic evaluations, it is not yet exhaustive in its co
 - Enhancing the safety pillar to include more real-world risk factors.
 - Adding more cultural and linguistic assessments
 
-## Publications
+## Resources
 
 For more details and information on SEA-HELM, you can refer to the following materials:
 1. [BHASA: A Holistic Southeast Asian Linguistic and Cultural Evaluation Suite for Large Language Models](https://arxiv.org/abs/2309.06085)
