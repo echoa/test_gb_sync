@@ -1,15 +1,10 @@
 # SEA-LIONv3 Llama3.1 8B
 ## Introduction
-Our SEA-LIONv3 Llama3.1 8B models have been continued pre-trained on top of [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) that is 8 billion parameters in size, with **context length of 128K tokens**, making it one of the SEA-LION models with the longest context length to date.
+Our SEA-LIONv3 Llama3.1 8B models have been continued pre-trained on top of [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) that is 8 billion parameters in size, with **context length of 128K tokens**, making it one of the SEA-LION models with the longest context length to date. It achieves state-of-the-art performance on regional benchmarks like SEA-HELM and outperforms models such as Llama 3.3 70B Instruct on key metrics.
 
-The training data for SEA-LIONv3 Llama3.1 8B comprises approximately 200B tokens across 11 SEA languages: Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese.
+SEA-LIONv3 Llama3.1 8B Base was trained on data comprised of approximately 200B tokens across 11 SEA languages: Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese.
 
-
-The fine-tuning process involved 9.5 million English instructions for math and reasoning (Stage 1) and 7.3 million multilingual prompts, emphasising SEA languages and tasks (Stage 2).
-
-
-SEA-LION v3 supports 13 SEA languages – 11 SEA languages (Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese) are included in the pre-training data, and 2 more additional SEA languages (Javanese and Sundanese) are included in the SFT data – and demonstrates strong cross-lingual capabilities. It achieves state-of-the-art performance on regional benchmarks like SEA-HELM and outperforms models such as Llama 3.3 70B Instruct on key metrics.
-
+SEA-LIONv3 Llama3.1 8B Instruct has been fine-tuned in two stages on approximately 12.3M English instruction-completion pairs alongside a pool of 4.5M Southeast Asian instruction-completion pairs from SEA languages such as Indonesian, Javanese, Sundanese, Tamil, Thai and Vietnamese.
 
 At a glance:
 - **Model type:** Decoder
