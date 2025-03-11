@@ -44,7 +44,7 @@ LLAMA3-8B-CPT-SEA-LIONv2-BASE was trained using [MosaicML Composer](https://gith
 
 ### Tokenizer
 
-For tokenisation, LLAMA3-8B-CPT-SEA-LIONv2-BASE employs the default tokenizer used in Llama 3 8B Instruct.
+For tokenisation, the model employs the default tokenizer used in Llama 3 8B Instruct.
 
 ### Training Data
 The LLAMA3-8B-CPT-SEA-LIONv2-BASE model was continued pre-trained on 48B tokens of the following data:
@@ -98,8 +98,6 @@ The LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct model was fine-tuned using 8x A100-40GB 
 LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct was trained on a wide range of instructions that were manually and stringently verified by our team. A large portion of the effort was dedicated to ensuring that each instruction-completion pair that the model sees is of high quality and any errors were corrected and rewritten by native speakers or else dropped from our mix.
 
 In addition, special care was taken to ensure that the datasets used had commercially permissive licenses through verification with the original data source. 
-
-Link to dataset: _coming soon_
 
 ### Benchmark Performance
 We evaluated LLAMA3-8B-CPT-SEA-LIONv2.1-Instruct on both general language capabilities and instruction-following capabilities.

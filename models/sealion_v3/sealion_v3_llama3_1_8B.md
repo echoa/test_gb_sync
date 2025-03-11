@@ -1,8 +1,9 @@
-# SEA-LIONv3 8B
+# SEA-LIONv3 Llama3.1 8B
 ## Introduction
 Our SEA-LIONv3 Llama3.1 8B models have been continued pre-trained on top of [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) that is 8 billion parameters in size, with **context length of 128K tokens**, making it one of the SEA-LION models with the longest context length to date.
 
-The SEA-LIONv3 Llama3.1 8B base model was continued pre-trained on approximately 200B tokens across 11 SEA languages: Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese, sourced from diverse datasets, including Wiki and Dolma.
+The training data for SEA-LIONv3 Llama3.1 8B comprises approximately 200B tokens across 11 SEA languages: Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese.
+
 
 The fine-tuning process involved 9.5 million English instructions for math and reasoning (Stage 1) and 7.3 million multilingual prompts, emphasising SEA languages and tasks (Stage 2).
 
@@ -15,9 +16,9 @@ At a glance:
 - **Tokenizer**: Default tokenizer used in Llama 3.1 8B Instruct
 - **Context Length**: 128K 
 - **Available Formats**:
-  - Base (llama3-8b-cpt-sea-lionv2-base)
-  - Instruct (llama3-8b-cpt-sea-lionv2.1-instruct)
-  - GGUF (llama3-8b-cpt-sea-lionv2.1-instruct-gguf)
+  - Base (llama3.1-8b-cpt-sea-lionv3-base)
+  - Instruct (llama3.1-8b-cpt-sea-lionv3-instruct)
+  - GGUF (llama3.1-8b-cpt-sea-lionv3-instruct-gguf)
 - **Supported Languages:** 
   1. Burmese
   2. Chinese
@@ -35,7 +36,7 @@ At a glance:
 - **License:**  [Llama3.1 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE)
 
 
-## LLAMA3.1 8B CPT SEA-LIONv3.1 Base
+## LLAMA3.1 8B CPT SEA-LIONv3 Base
 ### Training Infrastructure
 Llama3.1 8B CPT SEA-LIONv3 was trained using [MosaicML Composer](https://github.com/mosaicml/composer) on the following hardware:
 
@@ -56,7 +57,7 @@ Llama3.1 8B CPT SEA-LIONv3 was trained using [MosaicML Composer](https://github.
 
 
 ### Tokenizer
-Llama3.1 8B CPT SEA-LIONv3 models employs the default tokenizer used in Llama 3.1 8B Instruct.
+For tokenisation, the model employs the default tokenizer used in Llama 3.1 8B Instruct.
 
 ### Training Data
 Llama3.1 8B CPT SEA-LIONv3 base model was continued pre-trained on 200B tokens of the following data:
@@ -111,11 +112,11 @@ SEA-IFEval evaluates a model's ability to adhere to constraints provided in the 
 
 For more details on Llama3.1 8B CPT SEA-LIONv3 base benchmark performance, please refer to the SEA-HELM leaderboard, https://leaderboard.sea-lion.ai/.
 
-## LLAMA3.1 8B CPT SEA-LIONv3.1 Instruct
+## LLAMA3.1 8B CPT SEA-LIONv3 Instruct
 ### Fine-Tuning Methodology
 Llama3.1 8B CPT SEA-LIONv3 Instruct is a multilingual model that has been fine-tuned in two stages on approximately 12.3M English instruction-completion pairs alongside a pool of 4.5M Southeast Asian instruction-completion pairs from SEA languages such as Indonesian, Javanese, Sundanese, Tamil, Thai and Vietnamese.
 
-We performed instruction tuning in English and also in SEA languages such as Indonesian, Javanese, Sundanese, Tamil, Thai and Vietnamese on our continued pre-trained Llama3.1 8B CPT SEA-LIONv3 Base, a decoder model using the Llama 3.1 architecture, to create Llama3.1 8B CPT SEA-LIONv3 Instruct.
+We performed instruction tuning in English and also in SEA languages such as Indonesian, Javanese, Sundanese, Tamil, Thai and Vietnamese on our continued pre-trained Llama3.1 8B CPT SEA-LIONv3 Base, to create Llama3.1 8B CPT SEA-LIONv3 Instruct.
 
 ### Fine-Tuning Data
 Llama3.1 8B CPT SEA-LIONv3 Instruct was trained on a wide range of synthetic instructions, alongside publicly available instructions hand-curated by the team with the assistance of native speakers. In addition, special care was taken to ensure that the datasets used had commercially permissive licenses through verification with the original data source. 
@@ -150,9 +151,35 @@ SEA-MTBench evaluates a model's ability to engage in multi-turn (2 turns) conver
 
 For more details on Llama3.1 8B CPT SEA-LIONv3 Instruct benchmark performance, please refer to the SEA-HELM leaderboard, https://leaderboard.sea-lion.ai/.
 
-## LLAMA3.1 8B CPT SEA-LIONv3.1 Instruct GGUF
+## LLAMA3.1 8B CPT SEA-LIONv3 Instruct GGUF
+The following quantized GGUF formats of our Llama3.1 8B CPT SEA-LIONv3 Instruct model are available:
+- llama3.1-8B-cpt-sea-lionv3-instruct-F16
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q2_K
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q3_K_M
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q4_0
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q4_K_M
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q5_0
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q5_K_M
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q6_K
+- llama3.1-8b-cpt-sea-lionv3-instruct-Q8_0
+
+Please refer to our [How To Download](#how-to-download) section for more details on how to access them.
+
+<br>
 
 ## Download the Model
+Llama3.1 8B CPT SEA-LIONv3 models are available for download via the following channels:
+
+[HuggingFace SEA-LION V3 Collection](https://huggingface.co/collections/aisingapore/sea-lionv3-672589a39cdadd6a5b199581)
+
+
+| Model                | Download   |
+|----------------------|------------|
+| llama3.1-8b-cpt-sea-lionv3-base           | [HuggingFace](https://huggingface.co/aisingapore/gemma2-9b-cpt-sea-lionv3-base), [Kaggle](https://www.kaggle.com/models/ai-singapore/llama3.1-8b-cpt-sea-lionv3-base)      |
+| llama3.1-8b-cpt-sea-lionv3-instruct | [HuggingFace](hhttps://huggingface.co/aisingapore/llama3.1-8b-cpt-sea-lionv3-instruct), [Kaggle](https://www.kaggle.com/models/ai-singapore/llama3.1-8b-cpt-sea-lionv3-instruct)      |
+| llama3.1-8b-cpt-sea-lionv3-instruct-gguf | [HuggingFace](https://huggingface.co/aisingapore/llama3.1-8b-cpt-sea-lionv3-instruct-gguf), [Ollama](https://ollama.com/aisingapore/llama3.1-8b-cpt-sea-lionv3-instruct)      |
+
+<br>
 
 ## Usage 
 Llama3.1 8B CPT SEA-LIONv3 Instruct can be run using the 🤗 Transformers library 

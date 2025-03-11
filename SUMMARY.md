@@ -11,9 +11,9 @@
 ## Models
 
 * [SEA-LION V3 (Latest)](models/sealion_v3/sealion_v3.md)
-  * [SEA-LIONv3 9B](models/sealion_v3/sealion_v3_gemma2_9B.md)
-  * [SEA-LIONv3 8B](models/sealion_v3/sealion_v3_llama3_1_8B)
-  * [SEA-LIONv3 70B](models/sealion_v3/sealion_v3_llama3_1_70B)
+  * [SEA-LIONv3 Gemma2 9B](models/sealion_v3/sealion_v3_gemma2_9B.md)
+  * [SEA-LIONv3 Llama3.1 8B](models/sealion_v3/sealion_v3_llama3_1_8B)
+  * [SEA-LIONv3 Llama3.1 70B](models/sealion_v3/sealion_v3_llama3_1_70B)
 * [SEA-LION V2](models/sealion_v2/sealion_v2.md)
 * [SEA-LION V1](models/sealion_v1/sealion_v1.md)
 * [Foundation family models](models/others.md)
