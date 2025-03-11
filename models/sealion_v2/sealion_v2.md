@@ -141,7 +141,7 @@ Please refer to our [How To Download](#how-to-download) section for more details
 
 <br>
 
-## Download the Model
+## Download the Model(s)
 SEA-LION V2 models are available for download via the following channels:
 
 [HuggingFace SEA-LION V2 Collection](https://huggingface.co/collections/aisingapore/sea-lionv2-672589c4c7ea47e4174d3e7f)

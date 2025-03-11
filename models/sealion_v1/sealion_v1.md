@@ -198,7 +198,7 @@ The following quantized GGUF formats of our SEA-LION-7B-Instruct model are avail
 
 Please refer to our [How To Download](#how-to-download) section for more details on how to access them.
 
-## Download the Model
+## Download the Model(s)
 SEA-LION V1 models are available for download via the following channels:
 
 [HuggingFace SEA-LION V1 Collection](https://huggingface.co/collections/aisingapore/sea-lionv1-672589cd29a1781afa6be35e)

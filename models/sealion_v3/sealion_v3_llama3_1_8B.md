@@ -162,7 +162,7 @@ Please refer to our [How To Download](#how-to-download) section for more details
 
 <br>
 
-## Download the Model
+## Download the Model(s)
 Llama3.1 8B CPT SEA-LIONv3 models are available for download via the following channels:
 
 [HuggingFace SEA-LION V3 Collection](https://huggingface.co/collections/aisingapore/sea-lionv3-672589a39cdadd6a5b199581)

@@ -1,42 +1,204 @@
-# SEA-LION V3 70B
+# SEA-LIONv3 Llama3.1 70B
 ## Introduction
-Our SEA-LIONv3 Llama3.1 8B and 70B base models have been continued pre-trained on top of the Llama3.1 8B and 70B models respectively. Both have a context length of 128K, making them the SEA-LION models with the longest context length to date.
 
-Both models were continued pre-trained with 200 billion tokens of SEA data from languages such as Thai, Vietnamese, Tamil, and Indonesian, sourced from diverse datasets, including Wiki and Dolma. The fine-tuning process involved 9.5 million English instructions for math and reasoning (Stage 1) and 7.3 million multilingual prompts, emphasising SEA languages and tasks (Stage 2).
+Our SEA-LIONv3 Llama3.1 70B models have been continued pre-trained on top of [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) that is 70 billion parameters in size. Similar to our Llama3.1 8B model, our Llama3.1 70B also has a **context length of 128K tokens**, making them our SEA-LION models with the longest context length to date. 
 
-Training utilised Nvidia H100 and H200 GPUs on AWS and SingTel AI Cloud, with training durations of approximately 136 hours for the 8B variant and 495 hours for the 70B variant. Both models employ bfloat16 precision and advanced optimisation techniques like decoupled_adamw.
+SEA-LIONv3 Llama3.1 70B Base was trained on data comprised of approximately 200B tokens across 11 SEA languages: Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese.
 
-SEA-LION v3 supports 13 SEA languages – 11 SEA languages (Burmese, Chinese, English, Filipino, Indonesia, Khmer, Lao, Malay, Tamil, Thai and Vietnamese) are included in the pre-training data, and 2 more additional SEA languages (Javanese and Sundanese) are included in the SFT data – and demonstrates strong cross-lingual capabilities. It achieves state-of-the-art performance on regional benchmarks like SEA-HELM and outperforms models such as Llama 3.3 70B Instruct on key metrics.
-
-With enhanced natural language reasoning (NLR) abilities and superior instruction-following in SEA languages, SEA-LION v3 sets new standards in multilingual AI for the region.
+SEA-LIONv3 Llama3.1 70B Instruct has been fine-tuned in two stages on approximately 12.3M English instruction-completion pairs alongside a pool of 4.5M Southeast Asian instruction-completion pairs from SEA languages such as Indonesian, Javanese, Sundanese, Tamil, Thai and Vietnamese.
 
 At a glance:
 - **Model type:** Decoder
-- **Tokenizer**: Default tokenizer used in Llama 3 8B Instruct
+- **Tokenizer**: Default tokenizer used in Llama 3.1 70B Instruct
 - **Available Formats**:
-  - Base (llama3-8b-cpt-sea-lionv2-base)
-  - Instruct (llama3-8b-cpt-sea-lionv2.1-instruct)
-  - GGUF (llama3-8b-cpt-sea-lionv2.1-instruct-gguf)
-- **Languages supported:** English, Indonesian, Thai, Vietnamese, Tamil
-- **License:**  [Llama3.1 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE
+  - Base (llama3.1-70b-cpt-sea-lionv3-base)
+  - Instruct (llama3.1-70b-cpt-sea-lionv3-instruct)
+  - GGUF (llama3.1-70b-cpt-sea-lionv3-instruct-gguf)
+- **Languages supported:** 
+  1. Burmese
+  2. Chinese
+  3. English
+  4. Filipino
+  5. Indonesia
+  6. Javanese (Instruct/GGUF only)
+  7. Khmer
+  8. Lao
+  9. Malay
+  10. Sundanese (Instruct/GGUF only)
+  11. Tamil
+  12. Thai
+  13. Vietnamese
+- **License:**  [Llama3.1 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE)
 
 
-## LLAMA3.1 70B CPT SEA-LIONv3.1 Base
+## LLAMA3.1 70B CPT SEA-LIONv3 Base
 ### Training Infrastructure
-### Tokenizer
-### Training Data
-### Benchmark Performance
+Llama3.1 70B CPT SEA-LIONv3 was trained in two stages using [MosaicML Composer](https://github.com/mosaicml/composer) on the following hardware:
 
-## LLAMA3.1 70B CPT SEA-LIONv3.1 Instruct
-### Fine-Tuning Methodology
-### Fine-Tuning Data
+|   Stage    | Training Details      | Llama3.1 70B CPT SEA-LIONv3 |
+|------------|-----------------------|:---------------------------:|
+|First Stage | AWS p5e.48xlarge      |        8 instances          |
+|            | Nvidia H200 140GB GPU |        64                   |
+|            | Training Duration     |        200 hrs (step 0 - 9000)           |
+|Second Stage| SingTel HGX-100       |        16 instances          |
+|            | Nvidia H100 80GB GPU  |        128                   |
+|            | Training Duration     |        495 hrs (step 9000 - 47684)            |
+
+### Configuration
+| HyperParameter    | Llama3.1 70B CPT SEA-LIONv3 |
+|-------------------|:------------------------:|
+| Precision         | bfloat16                 |
+| Optimizer         | decoupled_adamw          |
+| Scheduler         | weight_stable_decay      |
+| Learning Rate     | 1.0e-5                   |
+| Global Batch Size | 512                      |
+
+### Tokenizer
+For tokenisation, the model employs the default tokenizer used in Llama 3.1 70B Instruct.
+
+### Training Data
+Llama3.1 70B CPT SEA-LIONv3 base model was continued pre-trained on 200B tokens of the following data:
+
+| Language                 | Source                                 | Total Tokens (B) | Percentage (%) | Total percentage (%) |
+| ------------------------ | -------------------------------------- | ---------------- | -------------- | -------------------- |
+| Code                     | StackV2                                | 40               | 20             | 20                   |
+| English                  | Dolma                                  | 37.5             | 18.75          | 25                   |
+|                          | Fineweb-Edu                            | 7.5              | 3.75           |
+|                          | Others                                 | 5                | 2.5            |
+| Chinese                  | SEA-LION Pile v1                       | 12               | 6              | 13                   |
+|                          | Others                                 | 14               | 7              |
+| Vietnamese               | SEA-LION Pile v1                       | 8.4              | 4.2            | 13                   |
+|                          | VinBigData                             | 16               | 8              |
+|                          | Others                                 | 1.6              | 0.8            |
+| Indonesian               | SEA-LION Pile v1                       | 7                | 3.5            | 13                   |
+|                          | SEA-LION Pile v2                       | 7                | 3.5            |
+|                          | Others                                 | 12               | 6              |
+| Thai                     | SEA-LION Pile v1                       | 10.7             | 5.35           | 10                   |
+|                          | WangChanBERTa                          | 8.5              | 4.25           |
+|                          | Others                                 | 0.8              | 0.4            |
+| Filipino - Malay - Tamil | SEA-LION Pile v1, AI4Bharat Sangraha   | 4.28             | 2.14           | 3                    |
+|                          | Others                                 | 1.72             | 0.86           |
+| Khmer - Lao - Burmese    | SEA-LION Pile v1                       | 5.2              | 2.6            | 3                    |
+|                          | Others                                 | 0.8              | 0.4            |
+
+Note: 
+- All token counts are counted using Llama 3.1 70B Instruct tokenizer
+- SEA-LION Pile v1 is processed from Common Crawl WET, which is published [here](https://huggingface.co/datasets/aisingapore/sea-lion-pile). The cutoff date of this version is September 2020.
+- SEA-LION Pile v2 is processed from Common Crawl WARC from October 2020 to April 2024.
+- Tamil data from Sangraha is published [here](https://huggingface.co/datasets/ai4bharat/sangraha). The paper can be found [here](https://arxiv.org/abs/2403.06350).
+- Tamil news is sourced with permission from [Seithi](https://seithi.mediacorp.sg/)
+
 ### Benchmark Performance
+We evaluated Llama3.1 70B CPT SEA-LIONv3 base model on general language capabilities and constraint-following behaviour.
+
+#### General Language Capabilities and Constraint-following Behaviour
+For the evaluation of general language capabilities, we employed the [SEA-HELM (also known as BHASA) evaluation benchmark](https://arxiv.org/abs/2309.06085v2) across a variety of tasks.
+These tasks include Question Answering (QA), Sentiment Analysis (Sentiment), Toxicity Detection (Toxicity), Translation in both directions (Eng>Lang & Lang>Eng), Abstractive Summarisation (Abssum), Causal Reasoning (Causal) and Natural Language Inference (NLI).
+
+Note: SEA-HELM is implemented using prompts to elicit answers in a strict format. For all tasks, the model is expected to provide an answer tag from which the answer is automatically extracted. For tasks where options are provided, the answer should comprise one of the pre-defined options. The scores for each task is normalised to account for baseline performance due to random chance.
+
+The evaluation was done **five-shot** with native prompts on a sample of 100-1000 instances for each dataset.
+
+Following the implementation of IFEval in OpenLLM leaderboard, we also implement SEA-IFEval to provide a comparison of the ability of the model to follow specific constraints in English and in SEA languages.
+
+**SEA-IFEval**
+
+Based on [IFEval](https://arxiv.org/abs/2311.07911), the linguists and native speakers in the team worked together to filter, localise and translate the datasets into the respective target languages to ensure that the examples remained reasonable, meaningful and natural.
+
+SEA-IFEval evaluates a model's ability to adhere to constraints provided in the prompt, for example beginning a response with a specific word/phrase or answering with a certain number of sections. Additionally, accuracy is normalised by the proportion of responses in the correct language (if the model performs the task correctly but responds in the wrong language, it is judged to have failed the task).
+
+For more details on Llama3.1 70B CPT SEA-LIONv3 base benchmark performance, please refer to the SEA-HELM leaderboard, https://leaderboard.sea-lion.ai/.
+
+
+## LLAMA3.1 70B CPT SEA-LIONv3 Instruct
+### Fine-Tuning Methodology
+Llama3.1 70B CPT SEA-LIONv3 Instruct was tuned using a combination of a full parameter fine-tune, on-policy alignment, and model merges of the best performing checkpoints. The training process for fine-tuning was approximately 3200 GPU hours, on a single node of 8x H100-80GB GPUs.
+
+### Fine-Tuning Data
+Llama3.1 70B CPT SEA-LIONv3 Instruct was trained on a wide range of synthetic instructions, alongside publicly available instructions hand-curated by the team with the assistance of native speakers. In addition, special care was taken to ensure that the datasets used had commercially permissive licenses through verification with the original data sources.
+
+### Benchmark Performance
+We evaluated Llama3.1 70B CPT SEA-LIONv3 Instruct on both general language capabilities and instruction-following capabilities.
+
+#### General Language Capabilities
+For the evaluation of general language capabilities, we employed the [SEA-HELM (also known as BHASA) evaluation benchmark](https://arxiv.org/abs/2309.06085v2) across a variety of tasks.
+These tasks include Question Answering (QA), Sentiment Analysis (Sentiment), Toxicity Detection (Toxicity), Translation in both directions (Eng>Lang & Lang>Eng), Abstractive Summarisation (Abssum), Causal Reasoning (Causal) and Natural Language Inference (NLI).
+
+Note: SEA-HELM is implemented using prompts to elicit answers in a strict format. For all tasks, the model is expected to provide an answer tag from which the answer is automatically extracted. For tasks where options are provided, the answer should comprise one of the pre-defined options. The scores for each task is normalised to account for baseline performance due to random chance.
+
+The evaluation was done **zero-shot** with native prompts on a sample of 100-1000 instances for each dataset.
+
+#### Instruction-following Capabilities
+Since Llama3.1 70B CPT SEA-LIONv3 Instruct is an instruction-following model, we also evaluated it on instruction-following capabilities with two datasets, SEA-IFEval (based on [IFEval](https://arxiv.org/abs/2311.07911)) and SEA-MTBench (based on [MT-Bench](https://arxiv.org/abs/2306.05685)).
+
+As these two datasets were originally in English, the linguists and native speakers in the team worked together to filter, localise and translate the datasets into the respective target languages to ensure that the examples remained reasonable, meaningful and natural.
+
+**SEA-IFEval**
+
+SEA-IFEval evaluates a model's ability to adhere to constraints provided in the prompt, for example beginning a response with a specific word/phrase or answering with a certain number of sections. Additionally, accuracy is normalised by the proportion of responses in the correct language (if the model performs the task correctly but responds in the wrong language, it is judged to have failed the task).
+
+
+**SEA-MTBench**
+
+SEA-MTBench evaluates a model's ability to engage in multi-turn (2 turns) conversations and respond in ways that align with human needs. We use `gpt-4-1106-preview` as the judge model and compare against `gpt-3.5-turbo-0125` as the baseline model. The metric used is the weighted win rate against the baseline model (i.e. average win rate across each category: Math, Reasoning, STEM, Humanities, Roleplay, Writing, Extraction). A tie is given a score of 0.5.
+
+
+For more details on Llama3.1 70B CPT SEA-LIONv3 Instruct benchmark performance, please refer to the SEA-HELM leaderboard, https://leaderboard.sea-lion.ai/.
 
 ## LLAMA3.1 70B CPT SEA-LIONv3.1 Instruct GGUF
+The following quantized GGUF formats of our Llama3.1 70B CPT SEA-LIONv3 Instruct model are available:
+- llama3.1-70B-cpt-sea-lionv3-instruct-F16
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q2_K
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q3_K_M
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q4_0
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q4_K_M
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q5_0
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q5_K_M
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q6_K
+- llama3.1-70B-cpt-sea-lionv3-instruct-Q8_0
 
-## Download the Model
+Please refer to our [How To Download](#how-to-download) section for more details on how to access them.
+
+<br>
+
+## Download the Model(s)
+Llama3.1 70B CPT SEA-LIONv3 models are available for download via the following channels:
+
+[HuggingFace SEA-LION V3 Collection](https://huggingface.co/collections/aisingapore/sea-lionv3-672589a39cdadd6a5b199581)
+
+
+| Model                | Download   |
+|----------------------|------------|
+| llama3.1-70b-cpt-sea-lionv3-base           | [HuggingFace](https://huggingface.co/aisingapore/llama3.1-70b-cpt-sea-lionv3-base)      |
+| llama3.1-70b-cpt-sea-lionv3-instruct | [HuggingFace](https://huggingface.co/aisingapore/llama3.1-70b-cpt-sea-lionv3-instruct)      |
+| llama3.1-70b-cpt-sea-lionv3-instruct-gguf | [HuggingFace](https://huggingface.co/aisingapore/llama3.1-70b-cpt-sea-lionv3-instruct-gguf), [Ollama](https://ollama.com/aisingapore/llama3.1-70b-cpt-sea-lionv3-instruct)      |
+
+<br>
 
 ## Usage 
+Llama3.1 70B CPT SEA-LIONv3 Instruct can be run using the 🤗 Transformers library 
+```python
+import transformers
+import torch
+
+model_id = "aisingapore/llama3.1-70B-cpt-sea-lionv3-instruct"
+
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model_id,
+    model_kwargs={"torch_dtype": torch.bfloat16},
+    device_map="auto",
+)
+messages = [
+    {"role": "user", "content": "Apa sentimen dari kalimat berikut ini?\nKalimat: Buku ini sangat membosankan.\nJawaban: "},
+]
+
+outputs = pipeline(
+    messages,
+    max_new_tokens=256,
+)
+print(outputs[0]["generated_text"][-1])
+```
 
 ## Disclaimer
 
