@@ -8,7 +8,7 @@ The SEA-LION models have served as a foundation for developing localized AI solu
 
 <table><tbody>
 <tr>
-<td valign="top">SEA-LION v1</td>
+<td width="144" valign="top">SEA-LION v1</td>
 <td>→ <a href="https://huggingface.co/airesearch/WangchanLion7B">WangchanLion 7B (Thai)</a>: WangchanLion 7B is a multilingual instruction-following model developed by PyThaiNLP and the VISTEC-depa AI Research Institute of Thailand. Fine-tuned on SEA-LION 7B, it incorporates approximately 500,000 samples from open-source, commercially permissible datasets, with a focus on Thai and English languages.</td>
 </tr>
 <tr>
