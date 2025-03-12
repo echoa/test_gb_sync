@@ -16,7 +16,7 @@
   * [SEA-LIONv3 Llama3.1 70B](models/sealion_v3/sealion_v3_llama3_1_70B.md)
 * [SEA-LION V2](models/sealion_v2/sealion_v2.md)
 * [SEA-LION V1](models/sealion_v1/sealion_v1.md)
-* [Localized Adaptations](models/sealion_adaptations.md)
+* [SEA-LION Foundation Family](models/sealion_adaptations.md)
 * [Getting the models](models/download_models.md)
 
 ## Benchmarks
