@@ -6,6 +6,14 @@ The SEA-LION models have served as a foundation for developing localized AI solu
 
 ### SEA-LION Model Tree
 
+| Base |  Localized Model |
+| - | - |
+| SEA-LION v1 | → <a href="https://huggingface.co/airesearch/WangchanLion7B">WangchanLion 7B (Thai)</a>:</b> WangchanLion 7B is a multilingual instruction-following model developed by PyThaiNLP and the VISTEC-depa AI Research Institute of Thailand. Fine-tuned on SEA-LION 7B, it incorporates approximately 500,000 samples from open-source, commercially permissible datasets, with a focus on Thai and English languages.  |
+| SEA-LION v2 | → <a href="https://huggingface.co/airesearch/WangchanLion7B">WangchanLion 7B (Thai)</a>:</b> WangchanLion 7B is a multilingual instruction-following model developed by PyThaiNLP and the VISTEC-depa AI Research Institute of Thailand. Fine-tuned on SEA-LION 7B, it incorporates approximately 500,000 samples from open-source, commercially permissible datasets, with a focus on Thai and English languages. |
+| SEA-LION v3 | → <a href="https://huggingface.co/aisingapore/Gemma2-9b-WangchanLIONv2-instruct">Gemma2 9B WangchanLIONv2 (Thai)</a>:</b> The Gemma2 9B WangchanLIONv2 Instruct model is a collaborative effort between VISTEC and AI Singapore. It has been fine-tuned with approximately 3,760,000 Thai instruction-completion pairs derived from human-annotated instructions, FLAN-style automatic data construction, and synthetic samples. This multilingual model supports both Thai and English languages. |
+|   | → <a href="https://huggingface.co/GoToCompany/gemma2-9b-cpt-sahabatai-v1-instruct">Gemma2 9B CPT Sahabat-AI (Indonesian)</a>:</b> The Gemma2 9B CPT Sahabat-AI v1 Instruct model, co-developed by GoTo Group and AI Singapore, has been fine-tuned with approximately 448,000 Indonesian instruction-completion pairs, along with 96,000 in Javanese, 98,000 in Sundanese, and an additional 129,000 in English. This multilingual model supports Indonesian, Javanese, Sundanese, and English. |
+
+
 <div style="display: table; width: 100%;">
     <div style="display: table-row;">
         <div style="display: table-cell; width: 20%; vertical-align: top;"><b>SEA-LION v1</b></div>
